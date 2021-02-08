@@ -46,18 +46,35 @@
 <body>
   <h1>php-oop-2</h1>
 
-  <hr>
-  <p><?php echo $item_1->name; ?></p>
-  <p><?php echo $item_1->brand; ?></p>
-  <p><?php echo $item_1->description; ?></p>
-  <p><?php echo $item_1->price; ?></p>
+  <div class="card_container">
 
-  <hr>
-  <p><?php echo $camera_1->name; ?></p>
-  <p><?php echo $camera_1->brand; ?></p>
-  <p><?php echo $camera_1->description; ?></p>
-  <p><?php echo $camera_1->price; ?></p>
-  <p><?php echo $camera_1->type; ?></p>
-  <p><?php echo $camera_1->getSpecs(); ?></p>
+    <div class="card">
+      <h2><?php echo $item_1->name . " - " . $item_1->brand ?></h2>
+      <p><?php echo $item_1->description; ?></p>
+      <span id="prezzo"><?php echo $item_1->price; ?></span>
+    </div>
+
+    <div class="card">
+    <h2><?php echo $camera_1->name . " - " . $camera_1->brand ?></h2>
+      <p><?php echo $camera_1->description; ?></p>
+      <span id="prezzo"><?php echo $camera_1->price; ?></span>
+      <p><?php echo $camera_1->type; ?></p>
+      <p><?php echo $camera_1->getSpecs(); ?></p>
+    </div>
+
+    <div class="card">
+      <h2><?php echo $item_1->name . " - " . $item_1->brand ?></h2>
+      <p><?php echo $item_1->description; ?></p>
+      <span id="prezzo"><?php echo $item_1->price; ?></span>
+    </div>
+
+    <div class="card">
+      <h2><?php echo $item_1->name . " - " . $item_1->brand ?></h2>
+      <p><?php echo $item_1->description; ?></p>
+      <span id="prezzo"><?php echo $item_1->price; ?></span>
+    </div>
+
+  </div>
+
 </body>
 </html>
