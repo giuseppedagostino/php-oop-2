@@ -23,8 +23,16 @@
     }
 
     // metodi
-    public function getSpecs() {
-      return $this->megapixels . "<br>" . $this->zoom . "<br>" . $this->sensor_dimensions;
+    public function getMegapixels() {
+      return $this->megapixels;
+    }
+
+    public function getZoom() {
+      return $this->zoom;
+    }
+    
+    public function getSensorDimensions() {
+      return $this->sensor_dimensions;
     }
 
   }
