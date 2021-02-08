@@ -2,6 +2,7 @@
 
 <?php 
   include_once __DIR__ . "/classes/item.php";
+  include_once __DIR__ . "/classes/camera.php";
 ?>
 
 <!DOCTYPE html>
@@ -18,20 +19,45 @@
   <title>php-oop-2</title>
 </head>
 
-<?php 
+<?php
+  
+  // primo elemento
   $item_1 = new Item (
     "P9 Lite",
     "Huawei",
     "Huawei P9 Lite è un smartphone Android completo, che non ha molto da invidare ai dispositivi più avanzati. Dispone di un enorme display Touchscreen da 5.2 pollici con una risoluzione di 1920x1080 pixel. Sul versante delle funzionalità a questo Huawei P9 Lite non manca davvero nulla. A cominciare dal modulo LTE 4G che permette un trasferimento dati e una navigazione in internet eccellente, passando per la connettività Wi-fi e il GPS.",
     "€ 139,99",
-  )
+  );
+
+  // primo elemento
+  $camera_1 = new Camera (
+    "D5300",
+    "Nikon",
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, totam iusto? Quia consequatur optio repellat explicabo aut iusto eos nobis consectetur perspiciatis delectus eum, voluptates nisi error hic! Cumque, dolore.",
+    "€ 899",
+    "Reflex",
+    "69",
+    "45x",
+    "50mm",
+  );
+
 ?> 
 
 <body>
   <h1>php-oop-2</h1>
+
+  <hr>
   <p><?php echo $item_1->name; ?></p>
   <p><?php echo $item_1->brand; ?></p>
   <p><?php echo $item_1->description; ?></p>
   <p><?php echo $item_1->price; ?></p>
+
+  <hr>
+  <p><?php echo $camera_1->name; ?></p>
+  <p><?php echo $camera_1->brand; ?></p>
+  <p><?php echo $camera_1->description; ?></p>
+  <p><?php echo $camera_1->price; ?></p>
+  <p><?php echo $camera_1->type; ?></p>
+  <p><?php echo $camera_1->getSpecs(); ?></p>
 </body>
 </html>

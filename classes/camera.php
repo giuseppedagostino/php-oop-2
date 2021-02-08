@@ -11,7 +11,7 @@
     private $sensor_dimensions;
 
     // costruttore
-    function __construct($name, $brand, $description, $price, $type, $megapixels, $zoom, $sensor_dimensions, $weight) {
+    function __construct($name, $brand, $description, $price, $type, $megapixels, $zoom, $sensor_dimensions) {
 
       parent::__construct($name, $brand, $description, $price);
 
