@@ -1,5 +1,3 @@
-<!-- <?php  ?> -->
-
 <?php 
   include_once __DIR__ . "/classes/item.php";
   include_once __DIR__ . "/classes/smartphone.php";
@@ -32,7 +30,7 @@
     "Kirin 970", // processore
     "3 Gb", // ram
     "3100 mAh", // batteria
-    "5,2''", // pollici
+    "5,2 pollici", // pollici
     "175 gr" // peso
   );
 
@@ -41,7 +39,7 @@
     "D5300",
     "Nikon",
     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, totam iusto? Quia consequatur optio repellat explicabo aut iusto eos nobis consectetur perspiciatis delectus eum, voluptates nisi error hic! Cumque, dolore.",
-    "€ 899,00",
+    "€ 490,00",
     "Reflex", // tipologia
     "69 Mpx", // megapixels
     "22x", // zoom
@@ -50,18 +48,42 @@
 
   // terzo elemento
   $bag_1 = new Bag (
-    "Tugo",
+    "Tugo L",
     "Tucano",
     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, totam iusto? Quia consequatur optio repellat explicabo aut iusto eos nobis consectetur perspiciatis delectus eum, voluptates nisi error hic! Cumque, dolore.",
-    "€ 59,90",
-    "40 cm", // altezza
-    "30 cm", // larghezza
-    "15 cm", // profondità
-    "20 litri", // capacità
+    "€ 69,90",
+    "55 cm", // altezza
+    "35 cm", // larghezza
+    "20 cm", // profondità
+    "39 litri", // capacità
     "Tessuto tecnico idrorepellente" // materiale
   );
 
   // quarto elemento
+  $bag_2 = new Bag (
+    "Work Out 3",
+    "Tucano",
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, totam iusto? Quia consequatur optio repellat explicabo aut iusto eos nobis consectetur perspiciatis delectus eum, voluptates nisi error hic! Cumque, dolore.",
+    "€ 79,90",
+    "43 cm", // altezza
+    "30 cm", // larghezza
+    "14 cm", // profondità
+    "20 litri", // capacità
+    "Tessuto tecnico idrorepellente" // materiale
+  );
+
+  // quinto elemento
+  $smartphone_2 = new Smartphone (
+    "Galaxy S21",
+    "Samsung",
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, totam iusto? Quia consequatur optio repellat explicabo aut iusto eos nobis consectetur perspiciatis delectus eum, voluptates nisi error hic! Cumque, dolore.",
+    "€ 879,00",
+    "Cortex-A78", // processore
+    "8 Gb", // ram
+    "4000 mAh", // batteria
+    "6,2 pollici", // pollici
+    "169 gr" // peso
+  );
 
 ?> 
 
@@ -70,12 +92,21 @@
 
   <div class="card_container">
 
+  <?php  ?> 
+
+    <!-- primo telefono -->
     <div class="card">
       <h2><?php echo $smartphone_1->name . " - " . $smartphone_1->brand ?></h2>
       <p><?php echo $smartphone_1->description; ?></p>
+      <p><strong>Processore: </strong><?php echo $smartphone_1->processor ?></p>
+      <p><strong>Ram: </strong><?php echo $smartphone_1->ram ?></p>
+      <p><strong>Batteria: </strong><?php echo $smartphone_1->battery_mAh ?></p>
+      <p><strong>Schermo: </strong><?php echo $smartphone_1->screen_inches ?></p>
+      <p><strong>Peso: </strong><?php echo $smartphone_1->weight ?></p>
       <span id="prezzo"><?php echo $smartphone_1->price; ?></span>
     </div>
 
+    <!-- prima fotocamera -->
     <div class="card">
     <h2><?php echo $camera_1->name . " - " . $camera_1->brand ?></h2>
       <p><?php echo $camera_1->description; ?></p>
@@ -86,6 +117,7 @@
       <p><strong>Obiettivo: </strong><?php echo $camera_1->getSensorDimensions(); ?></p>
     </div>
 
+    <!-- primo zaino -->
     <div class="card">
     <h2><?php echo $bag_1->name . " - " . $bag_1->brand ?></h2>
       <p><?php echo $bag_1->description; ?></p>
@@ -93,6 +125,28 @@
       <p><strong>Dimensioni: </strong><?php echo $bag_1->height . " x " . $bag_1->width . " x " . $bag_1->depth ?></p>
       <p><strong>Capacità: </strong> <?php echo $bag_1->litres; ?></p>
       <p><strong>Materiale: </strong> <?php echo $bag_1->material; ?></p>
+    </div>
+
+    <!-- secondo zaino -->
+    <div class="card">
+      <h2><?php echo $bag_2->name . " - " . $bag_2->brand ?></h2>
+      <p><?php echo $bag_2->description; ?></p>
+      <span id="prezzo"><?php echo $bag_2->price; ?></span>
+      <p><strong>Dimensioni: </strong><?php echo $bag_2->height . " x " . $bag_2->width . " x " . $bag_2->depth ?></p>
+      <p><strong>Capacità: </strong> <?php echo $bag_2->litres; ?></p>
+      <p><strong>Materiale: </strong> <?php echo $bag_2->material; ?></p>
+    </div>
+
+    <!-- secondo telefono -->
+    <div class="card">
+    <h2><?php echo $smartphone_2->name . " - " . $smartphone_2->brand ?></h2>
+      <p><?php echo $smartphone_2->description; ?></p>
+      <p><strong>Processore: </strong><?php echo $smartphone_2->processor ?></p>
+      <p><strong>Ram: </strong><?php echo $smartphone_2->ram ?></p>
+      <p><strong>Batteria: </strong><?php echo $smartphone_2->battery_mAh ?></p>
+      <p><strong>Schermo: </strong><?php echo $smartphone_2->screen_inches ?></p>
+      <p><strong>Peso: </strong><?php echo $smartphone_2->weight ?></p>
+      <span id="prezzo"><?php echo $smartphone_2->price; ?></span>
     </div>
 
   </div>
