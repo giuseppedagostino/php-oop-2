@@ -6,9 +6,9 @@
     
     // proprietà
     public $type;
-    public $megapixels;
-    public $zoom;
-    public $sensor_dimensions;
+    private $megapixels;
+    private $zoom;
+    private $sensor_dimensions;
 
     // costruttore
     function __construct($name, $brand, $description, $price, $type, $megapixels, $zoom, $sensor_dimensions, $weight) {
@@ -20,6 +20,11 @@
       $this->zoom = $zoom;
       $this->sensor_dimensions = $sensor_dimensions;
 
+    }
+
+    // metodi
+    public function getSpecs() {
+      return $this->megapixels . "<br>" . $this->zoom . "<br>" . $this->sensor_dimensions;
     }
 
   }
