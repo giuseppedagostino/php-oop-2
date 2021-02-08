@@ -35,17 +35,30 @@ p:first-of-type {
   background-image: linear-gradient(to bottom, green 0%, green 20%, white 20%, white 100%);
   border-radius: 20px;
   transition: 0.25s;
+  overflow: hidden;
 }
 .card:hover {
   cursor: pointer;
   transform: scale(1.025);
   box-shadow: 0 0 16px 4px rgba(0,0,0,0.6); 
 }
-#prezzo {
+.prezzo {
   position: absolute;
   bottom: 20px;
   right: 20px;
   font-size: 24px;
   font-weight: bold;
   color: green;
+}
+.discount {
+  position: absolute;
+  bottom: 60px;
+  right: -120px;
+  width: 600px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+  padding: 10px;
+  transform: rotate(-30deg);
 }

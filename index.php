@@ -31,7 +31,8 @@
     "3 Gb", // ram
     "3100 mAh", // batteria
     "5,2 pollici", // pollici
-    "175 gr" // peso
+    "175 gr", // peso
+    10 // sconto
   );
 
   // secondo elemento
@@ -82,7 +83,8 @@
     "8 Gb", // ram
     "4000 mAh", // batteria
     "6,2 pollici", // pollici
-    "169 gr" // peso
+    "169 gr", // peso
+    30 // sconto
   );
 
 ?> 
@@ -103,7 +105,14 @@
       <p><strong>Batteria: </strong><?php echo $smartphone_1->battery_mAh ?></p>
       <p><strong>Schermo: </strong><?php echo $smartphone_1->screen_inches ?></p>
       <p><strong>Peso: </strong><?php echo $smartphone_1->weight ?></p>
-      <span id="prezzo">€ <?php echo $smartphone_1->getDiscount(10); ?></span>
+      <p class="discount">
+        <?php 
+          if ($smartphone_1->getDiscount(10) != $smartphone_1->price) {
+            echo "SCONTATO !!";
+          }
+        ?>
+      </p>
+      <span class="prezzo">€ <?php echo $smartphone_1->getDiscount(10); ?></span>
     </div>
 
     <!-- prima fotocamera -->
@@ -114,7 +123,7 @@
       <p><strong>Risoluzione: </strong><?php echo $camera_1->getMegapixels(); ?></p>
       <p><strong>Zoom: </strong><?php echo $camera_1->getZoom(); ?></p>
       <p><strong>Obiettivo: </strong><?php echo $camera_1->getSensorDimensions(); ?></p>
-      <span id="prezzo">€ <?php echo $camera_1->price; ?></span>
+      <span class="prezzo">€ <?php echo $camera_1->price; ?></span>
     </div>
 
     <!-- primo zaino -->
@@ -124,7 +133,7 @@
       <p><strong>Dimensioni: </strong><?php echo $bag_1->height . " x " . $bag_1->width . " x " . $bag_1->depth ?></p>
       <p><strong>Capacità: </strong> <?php echo $bag_1->litres; ?></p>
       <p><strong>Materiale: </strong> <?php echo $bag_1->material; ?></p>
-      <span id="prezzo">€ <?php echo $bag_1->price; ?></span>
+      <span class="prezzo">€ <?php echo $bag_1->price; ?></span>
     </div>
 
     <!-- secondo zaino -->
@@ -134,7 +143,7 @@
       <p><strong>Dimensioni: </strong><?php echo $bag_2->height . " x " . $bag_2->width . " x " . $bag_2->depth ?></p>
       <p><strong>Capacità: </strong> <?php echo $bag_2->litres; ?></p>
       <p><strong>Materiale: </strong> <?php echo $bag_2->material; ?></p>
-      <span id="prezzo">€ <?php echo $bag_2->price; ?></span>
+      <span class="prezzo">€ <?php echo $bag_2->price; ?></span>
     </div>
 
     <!-- secondo telefono -->
@@ -146,7 +155,14 @@
       <p><strong>Batteria: </strong><?php echo $smartphone_2->battery_mAh ?></p>
       <p><strong>Schermo: </strong><?php echo $smartphone_2->screen_inches ?></p>
       <p><strong>Peso: </strong><?php echo $smartphone_2->weight ?></p>
-      <span id="prezzo">€ <?php echo $smartphone_2->getDiscount(30); ?></span>
+      <p class="discount">
+        <?php 
+          if ($smartphone_1->getDiscount(30) != $smartphone_1->price) {
+            echo "SCONTATO !!";
+          }
+        ?>
+      </p>
+      <span class="prezzo">€ <?php echo $smartphone_2->getDiscount(30); ?></span>
     </div>
 
   </div>
