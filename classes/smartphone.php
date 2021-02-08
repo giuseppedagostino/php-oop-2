@@ -24,6 +24,12 @@
 
     }
 
+    // metodi
+    public function getDiscount($perc) {
+      return number_format($this->price - ($this->price / 100 * $perc) ,2);
+    }
+    // con public format arrotondo il numero alla seconda cifra decimale
+
   }
 
 ?>
